@@ -260,7 +260,6 @@ export default {
 @media screen and (max-width: 425px) {
   .subtitle {
     font-size: 0.85rem !important;
-    text-align: justify !important;
   }
   .price {
     font-size: 0.7rem !important;

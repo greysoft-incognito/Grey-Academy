@@ -199,7 +199,7 @@ export default {
   methods: {
     course_please(a) {
       // a.splice('Become a')
-      this.courseName = a.split("Become a")[1];
+      this.courseName = a;
       console.log(this.courseName);
     },
     setToLocal(singleCourse) {
@@ -338,7 +338,6 @@ export default {
 @media screen and (max-width: 425px) {
   .subtitle {
     font-size: 0.85rem !important;
-    text-align: justify !important;
   }
   .price {
     font-size: 0.7rem !important;

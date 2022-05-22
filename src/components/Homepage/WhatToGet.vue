@@ -29,7 +29,7 @@
           />
         </div>
         <div class="text-primary text-center q-my-lg text-h6 what_topic">
-          In-demend Skills
+          In-demand Skills
         </div>
         <div class="text-center q-mb-xl text-subtitle1">
           Gain hands-on tech skills you need to build a career successfully in
@@ -94,8 +94,8 @@
             icon="fa-solid fa-graduation-cap"
           />
         </div>
-        <div class="text-primary text-center q-my-lg text-h6">
-          100 what_topic% Hybrid
+        <div class="text-primary text-center q-my-lg text-h6 what_topic">
+          100% Hybrid
         </div>
         <div class="text-center q-mb-xl text-subtitle1">
           we set the pace in creating a virtual experience that stimulates you

@@ -65,7 +65,7 @@
         ©2022 All Rights Reserved. Greysoft
       </div>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-        <ul class="">
+        <ul class="row">
           <li>
             <a href=""><i class="fa-brands fa-facebook fa-2x q-mx-sm"></i></a>
           </li>
@@ -94,14 +94,11 @@ export default {};
 <style scoped>
 ul {
   list-style: none;
-  display: flex;
+  /* display: flex; */
   justify-content: end;
   padding: 0;
 }
 
-li {
-  /* padding: 0 1%; */
-}
 a {
   color: rgba(255, 255, 255, 0.64);
 }
@@ -141,9 +138,6 @@ a {
 }
 .tweet {
   display: flex;
-}
-.tweet_text {
-  text-align: justify;
 }
 @media screen and (max-width: 600px) {
   .rights {

@@ -34,14 +34,17 @@
               setToLocal(programming),
                 this.$router.push(`/learn/${programming.title}`)
             "
+            class="q-my-md"
             >Learn more...</a
           >
           <div>
             <q-btn
+              no-caps
               label="Register"
-              to="/data"
+              @click="course_please(programming.title), (register = true)"
+              flat
               text-color="white"
-              class="bg-primary q-mt-lg"
+              class="bg-primary self-end"
             />
           </div>
         </div>
@@ -74,14 +77,17 @@
               setToLocal(Creative),
                 this.$router.push(`/learn/${Creative.title}`)
             "
+            class="q-my-md"
             >Learn more...</a
           >
           <div>
             <q-btn
+              no-caps
               label="Register"
-              to="/design"
+              @click="course_please(Creative.title), (register = true)"
+              flat
               text-color="white"
-              class="bg-primary q-mt-lg"
+              class="bg-primary self-end"
             />
           </div>
         </div>
@@ -113,14 +119,17 @@
             @click="
               setToLocal(design), this.$router.push(`/learn/${design.title}`)
             "
+            class="q-my-md"
             >Learn more...</a
           >
           <div>
             <q-btn
+              no-caps
               label="Register"
-              to="/programming"
+              @click="course_please(design.title), (register = true)"
+              flat
               text-color="white"
-              class="bg-primary q-mt-lg"
+              class="bg-primary self-end"
             />
           </div>
         </div>
@@ -153,14 +162,17 @@
               setToLocal(business),
                 this.$router.push(`/learn/${business.title}`)
             "
+            class="q-my-md"
             >Learn more...</a
           >
           <div>
             <q-btn
+              no-caps
               label="Register"
-              to="/product"
+              @click="course_please(business.title), (register = true)"
+              flat
               text-color="white"
-              class="bg-primary q-mt-lg"
+              class="bg-primary self-end"
             />
           </div>
         </div>
@@ -186,6 +198,11 @@
       <Schools />
     </q-card>
   </q-dialog>
+  <q-dialog v-model="register" class="">
+    <q-card style="max-width: 50vw; width: 100%" class="full-height modal">
+      <RegisterCourse :coursed="this.courseName" />
+    </q-card>
+  </q-dialog>
 </template>
 
 <script>
@@ -195,10 +212,12 @@ import business from "src/Data/Courses/business";
 import design from "src/Data/Courses/design";
 import Creative from "src/Data/Courses/Creative";
 import Schools from "../Schools.vue";
+import RegisterCourse from "src/components/Homepage/RegisterCourse.vue";
 
 export default {
   components: {
     Schools,
+    RegisterCourse,
   },
   data() {
     return {
@@ -207,9 +226,15 @@ export default {
       design,
       Creative,
       schools: ref(false),
+      register: ref(false),
     };
   },
   methods: {
+    course_please(a) {
+      // a.splice('Become a')
+      this.courseName = a.split("Become a")[1];
+      console.log(this.courseName);
+    },
     setToLocal(singleCourse) {
       console.log(singleCourse);
       localStorage.setItem("course", JSON.stringify(singleCourse));

@@ -185,7 +185,7 @@ export default defineComponent({
 }
 
 .course_cards {
-  /* grid-auto-rows: auto; */
+  grid-auto-rows: auto;
 }
 .course {
   padding: 0 0 5%;
