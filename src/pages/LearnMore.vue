@@ -116,14 +116,14 @@
         style="width: 50%"
         flat
         text-color="white"
-        class="bg-primary self-end register"
+        class="bg-primary self-end register q-mb-xl q-mt-md"
       />
       <q-space />
     </div>
   </div>
 
   <q-dialog v-model="register" class="">
-    <q-card style="max-width: 50vw; width: 100%" class="full-height modal">
+    <q-card style="max-width: 50vw; width: 100%; height: 70vh" class="modal">
       <RegisterCourse :coursed="this.courseName" />
     </q-card>
   </q-dialog>
@@ -287,7 +287,7 @@
 </template>
 
 <script>
-import instructors from "src/Data/Instructors";
+import instructors from "src/boot/Data/Instructors";
 import { ref } from "vue";
 import Payment from "src/components/Payment/payment.vue";
 import Community from "src/components/Homepage/Community.vue";
@@ -317,10 +317,39 @@ export default {
       console.log(this.courseName);
     },
   },
+  // created() {
+  //   this.$watch(
+  //     (e) => this.$route.params,
+  //     (param) => {
+  //       const course = this.$loaded[param.type].filter(
+  //         (e) => e.id === param.id
+  //       );
+  //       console.log(course);
+  //       console.log(this.$loaded[param.type].filter((e) => e.id === param.id));
+
+  //       // this.setToLocal();
+  //     },
+  //     { immediate: true, deep: true }
+  //   );
+  // },
   mounted() {
-    let courses = JSON.parse(localStorage.getItem("course"));
+    // let courses = JSON.parse(localStorage.getItem("course"));
     // console.log(courses);
-    this.courseArray = courses;
+    // this.courseArray = courses;
+    // console.log(this.$route.params.course);
+
+    let courseId = this.$route.params.course;
+    let type = this.$route.params.type;
+    let courses = this.$loaded;
+    let cat = courses[type];
+    let course = null;
+    // console.log(courseId);
+    // console.log(courses[type]);
+    cat.forEach((element) => {
+      // console.log(element);
+      if (element.id == courseId) this.courseArray = element;
+    });
+    // console.log(this.courseArray);
   },
 };
 </script>

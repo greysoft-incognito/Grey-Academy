@@ -2,6 +2,7 @@ const programming = [
   {
     id: 1,
     title: "Become a Frontend Developer",
+    slug: "become-a-frontend-developer",
     description:
       "You’ll learn all you need to know and build the capacity to handle projects with an interesting portfolio as a frontend developer with a coaching program that focuses on fundamentals of HTML, CSS, JavaScript and React.",
     image: "/Images/Programming/smilingMan.png",

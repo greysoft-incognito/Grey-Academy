@@ -38,17 +38,17 @@
         @click="schools = true"
         icon-right="chevron_right"
         text-color="white"
-        class="bg-primary q-mt-md button explore_button"
+        class="bg-primary q-my-md button explore_button"
         size="1.2rem"
       />
-      <div class="watch_text text-primary q-my-lg items-center text-subtitle2">
+      <!-- <div class="watch_text text-primary q-my-lg items-center text-subtitle2">
         <q-icon
           name="play_circle"
           class="text-primary q-my-auto"
           size="1.1rem"
         />
         Watch: Why Grey Academy is important to scale your career
-      </div>
+      </div> -->
     </div>
 
     <div
@@ -87,6 +87,9 @@ export default {
 </script>
 
 <style scoped>
+.hero {
+  line-height: 1.1;
+}
 .button_hide {
   display: none;
 }

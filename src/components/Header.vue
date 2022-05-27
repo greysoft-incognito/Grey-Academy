@@ -77,8 +77,8 @@
           <li>
             <a>For companies</a>
             <ul class="bg-white text-primary inner_list companies q-pa-md">
-              <li>Corporate Training</li>
-              <li>Sponsorships</li>
+              <!-- <li>Corporate Training</li>
+              <li>Sponsorships</li> -->
             </ul>
           </li>
         </ul>
@@ -127,8 +127,15 @@ export default {};
 
 <style scoped>
 .grey_text {
-  border-bottom: 6px dotted;
+  border-bottom: 8px dotted;
 }
+
+@media screen and (max-width: 866px) {
+  .grey_text {
+    border-bottom: 6px dotted;
+  }
+}
+
 .nav {
   width: 100%;
   top: 15%;
@@ -138,7 +145,7 @@ export default {};
 .vector {
   width: 60%;
   position: absolute;
-  top: 100%;
+  top: 95%;
   left: 45%;
   transform: translate(-50%, -100%);
 }
@@ -327,9 +334,27 @@ ul li:hover ul {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .logo_text {
+    font-size: 1.05rem;
+  }
+  .grey_text {
+    border-width: 5px;
+  }
+}
+
 @media screen and (max-width: 410px) {
   .vector {
     top: 15%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .logo_text {
+    font-size: 0.95rem;
+  }
+  .grey_text {
+    border-width: 5px;
   }
 }
 </style>

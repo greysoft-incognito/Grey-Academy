@@ -44,7 +44,7 @@
               @click="course_please(programming.title), (register = true)"
               flat
               text-color="white"
-              class="bg-primary self-end"
+              class="bg-primary self-end q-mt-sm"
             />
           </div>
         </div>
@@ -87,7 +87,7 @@
               @click="course_please(Creative.title), (register = true)"
               flat
               text-color="white"
-              class="bg-primary self-end"
+              class="bg-primary self-end q-mt-sm"
             />
           </div>
         </div>
@@ -129,7 +129,7 @@
               @click="course_please(design.title), (register = true)"
               flat
               text-color="white"
-              class="bg-primary self-end"
+              class="bg-primary self-end q-mt-sm"
             />
           </div>
         </div>
@@ -172,7 +172,7 @@
               @click="course_please(business.title), (register = true)"
               flat
               text-color="white"
-              class="bg-primary self-end"
+              class="bg-primary self-end q-mt-sm"
             />
           </div>
         </div>
@@ -207,10 +207,10 @@
 
 <script>
 import { ref } from "vue";
-import programming from "src/Data/Courses/programming";
-import business from "src/Data/Courses/business";
-import design from "src/Data/Courses/design";
-import Creative from "src/Data/Courses/Creative";
+import programming from "src/boot/Data/Courses/programming";
+import business from "src/boot/Data/Courses/business";
+import design from "src/boot/Data/Courses/design";
+import Creative from "src/boot/Data/Courses/Creative";
 import Schools from "../Schools.vue";
 import RegisterCourse from "src/components/Homepage/RegisterCourse.vue";
 

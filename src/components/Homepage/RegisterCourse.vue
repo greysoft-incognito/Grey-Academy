@@ -6,36 +6,30 @@
 
     <div class="q-mb-md">
       <label for="" class="text-caption text-primary text-bold">
-        First Name</label
+        Full Name</label
       >
-      <q-input dense outlined color="primary" bg-color="" />
-    </div>
-
-    <div class="q-mb-md">
-      <label for="" class="text-caption text-primary text-bold">
-        Last Name</label
-      >
-      <q-input dense outlined color="primary" bg-color="" />
+      <q-input v-model="name" dense outlined color="primary" bg-color="" />
     </div>
 
     <div class="q-mb-md">
       <label for="" class="text-caption text-primary text-bold">
         Email Address</label
       >
-      <q-input dense outlined color="primary" bg-color="" />
+      <q-input v-model="email" dense outlined color="primary" bg-color="" />
     </div>
 
     <div class="q-mb-md">
       <label for="" class="text-caption text-primary text-bold">
         Phone Number</label
       >
-      <q-input dense outlined color="primary" bg-color="" />
+      <q-input v-model="phone" dense outlined color="primary" bg-color="" />
     </div>
 
     <div class="row">
       <q-space />
       <q-btn
         label="Submit"
+        @click="sendMail()"
         no-caps
         style="width: 50%"
         size="1.05rem"
@@ -53,14 +47,41 @@
 </template>
 
 <script>
+import axios from "axios";
+import { ref } from "vue";
 export default {
   props: ["coursed"],
   data() {
     return {
       course: "",
+      name: ref(""),
+      email: ref(""),
+      phone: ref(""),
     };
   },
-  methods: {},
+  methods: {
+    sendMail() {
+      let formData = new FormData();
+      formData.append("name", this.name);
+      formData.append("email", this.email);
+      formData.append("phone", this.phone);
+      console.log(formData);
+      axios({
+        method: "POST",
+        url: "http://192.168.1.168:8000/api/application",
+        data: formData,
+      })
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+  },
+  mounted() {
+    // this.sendMail();
+  },
 };
 </script>
 

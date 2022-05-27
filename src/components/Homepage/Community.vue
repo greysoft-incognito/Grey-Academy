@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import communities from "src/Data/community";
+import communities from "src/boot/Data/community";
 export default {
   data() {
     return {

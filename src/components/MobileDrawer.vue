@@ -178,15 +178,15 @@
     </q-list>
 
     <!-- <q-list class="q-px-md"> -->
-    <div class="bg-primary absolute-bottom">
-      <div
-        class="q-mr-md text-center q-py-xs text-weight-bold text-white"
-        style=""
-      >
-        ©GreyAcademy
-      </div>
-    </div>
     <!-- </q-list> -->
+  </div>
+  <div class="bg-primary absolute-bottom">
+    <div
+      class="q-mr-md text-center q-py-xs text-weight-bold text-white"
+      style=""
+    >
+      ©GreyAcademy
+    </div>
   </div>
 </template>
 

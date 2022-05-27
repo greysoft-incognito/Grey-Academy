@@ -11,7 +11,7 @@
         of effective collaboration to solve real world problems.
       </div>
     </div>
-    <div class="testimony_image row items-center q-px-md q-my-md">
+    <!-- <div class="testimony_image row items-center q-px-md q-my-md">
       <q-space />
       <div class="image">
         <q-img src="Images/Homepage/testimonial.png" width="100%" />
@@ -20,8 +20,7 @@
         <div class="text-subtitle1 text-bold">Read testimonials</div>
         <div class="text-caption">Over 50 success stories</div>
       </div>
-      <!-- <q-space/> -->
-    </div>
+    </div> -->
   </div>
 
   <div class="q-my-xl text-bold text-h4 text-center">Courses</div>
@@ -29,25 +28,21 @@
   <div class="middle">
     <div
       class="course row justify-center q-mt-xl"
-      v-for="course in programming"
+      v-for="course in $loaded.programming"
       :key="course.id"
     >
       <q-img
         class="col-lg-3 col-md-5 col-sm-5 bg_props course_image"
         :src="course.image"
       ></q-img>
-      <div
-        class="q-my-md col-lg-7 col-md-7 col-sm-7 course_text flex content-between"
-      >
+      <div class="q-my-md col-lg-7 col-md-7 col-sm-7 course_div">
         <div class="">
           <div class="row q-gutter-x-xs no-wrap">
             <q-btn
               label="Early Starter"
               text-color="primary"
               class="early_starter"
-              @click="
-                setToLocal(course), this.$router.push(`/learn/${course.title}`)
-              "
+              :to="`/learn/programming/${course.id}`"
               flat
               no-caps
             />
@@ -90,7 +85,7 @@
     </div>
 
     <q-dialog v-model="register" class="">
-      <q-card style="max-width: 50vw; width: 100%" class="full-height modal">
+      <q-card style="max-width: 50vw; width: 100%; height: 70vh" class="modal">
         <RegisterCourse :coursed="this.courseName" />
       </q-card>
     </q-dialog>
@@ -108,9 +103,7 @@
         :src="contract.image"
         class="col-lg-3 col-md-5 col-sm-5 bg_props course_image"
       />
-      <div
-        class="q-my-md col-lg-7 col-md-7 col-sm-7 course_text flex content-between"
-      >
+      <div class="q-my-md col-lg-7 col-md-7 col-sm-7 course_div">
         <div class="">
           <div class="row q-gutter-x-xs no-wrap">
             <q-btn
@@ -180,8 +173,8 @@
 
 <script>
 import { ref } from "vue";
-import programming from "src/Data/Courses/programming";
-import smartContract from "src/Data/Courses/smartContract";
+import programming from "src/boot/Data/Courses/programming";
+import smartContract from "src/boot/Data/Courses/smartContract";
 import RegisterCourse from "src/components/Homepage/RegisterCourse.vue";
 import SuccessStories from "src/components/Homepage/SuccessStories.vue";
 
@@ -198,7 +191,6 @@ export default {
   components: { RegisterCourse, SuccessStories },
   methods: {
     course_please(a) {
-      // a.splice('Become a')
       this.courseName = a;
       console.log(this.courseName);
     },
@@ -233,7 +225,7 @@ export default {
   /* height: 60vh; */
   padding: 3% 8%;
 }
-.course_text {
+.course_div {
   padding: 0 8% 0 5%;
 }
 .early_starter {

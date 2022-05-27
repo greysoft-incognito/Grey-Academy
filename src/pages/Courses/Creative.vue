@@ -9,7 +9,7 @@
         kickstart their journey to learning
       </div>
     </div>
-    <div class="testimony_image row items-center q-px-md q-my-md">
+    <!-- <div class="testimony_image row items-center q-px-md q-my-md">
       <q-space />
       <div class="image">
         <q-img src="Images/Homepage/testimonial.png" width="100%" />
@@ -18,8 +18,7 @@
         <div class="text-subtitle1 text-bold">Read testimonials</div>
         <div class="text-caption">Over 50 success stories</div>
       </div>
-      <!-- <q-space/> -->
-    </div>
+    </div> -->
   </div>
 
   <div class="q-my-xl text-bold text-h4 text-center">Courses</div>
@@ -34,25 +33,21 @@
         class="col-lg-3 col-md-5 col-sm-5 bg_props course_image"
         :src="course.image"
       ></q-img>
-      <div
-        class="q-my-md col-lg-7 col-md-7 col-sm-7 course_text flex content-between"
-      >
+      <div class="q-my-md col-lg-7 col-md-7 col-sm-7 course_div">
         <div class="">
           <div class="row q-gutter-x-xs no-wrap">
             <q-btn
               label="Early Starter"
               text-color="primary"
-              class="early_starter"
-              @click="
-                setToLocal(course), this.$router.push(`/learn/${course.title}`)
-              "
+              class="early_starter price"
+              :to="`/learn/creative/${course.id}`"
               flat
               no-caps
             />
             <q-btn
               label="Download Brochure"
               text-color="white"
-              class="bg-primary"
+              class="bg-primary price"
               flat
               no-caps
             />
@@ -110,7 +105,7 @@
 </template>
 
 <script>
-import creative from "src/Data/Courses/Creative";
+import creative from "src/boot/Data/Courses/Creative";
 import RegisterCourse from "src/components/Homepage/RegisterCourse.vue";
 import { ref } from "vue";
 import SuccessStories from "src/components/Homepage/SuccessStories.vue";
@@ -169,7 +164,7 @@ export default {
   /* height: 60vh; */
   padding: 3% 8%;
 }
-.course_text {
+.course_div {
   padding: 0 8% 0 5%;
 }
 .early_starter {

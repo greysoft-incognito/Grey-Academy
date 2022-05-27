@@ -26,7 +26,12 @@
 
     <!-- </q-header> -->
 
-    <q-drawer v-model="leftDrawerOpen" bordered side="right">
+    <q-drawer
+      v-model="leftDrawerOpen"
+      style="height: 100vh"
+      bordered
+      side="right"
+    >
       <q-list>
         <MobileDrawer />
       </q-list>

@@ -2,9 +2,9 @@
   <Hero />
   <WhatToGet />
   <OurCourses />
-  <VideoSection />
+  <!-- <VideoSection /> -->
   <SuccessStories />
-  <Appointment />
+  <!-- <Appointment /> -->
   <Community />
 </template>
 
@@ -13,10 +13,10 @@ import { defineComponent } from "vue";
 import Hero from "src/components/Homepage/Hero.vue";
 import WhatToGet from "../components/Homepage/WhatToGet.vue";
 import OurCourses from "../components/Homepage/OurCourses.vue";
-import VideoSection from "../components/Homepage/VideoSection.vue";
+// import VideoSection from "../components/Homepage/VideoSection.vue";
 import SuccessStories from "../components/Homepage/SuccessStories.vue";
 import Community from "../components/Homepage/Community.vue";
-import Appointment from "src/components/Homepage/Appointment.vue";
+// import Appointment from "src/components/Homepage/Appointment.vue";
 
 export default defineComponent({
   name: "IndexPage",
@@ -24,10 +24,10 @@ export default defineComponent({
     Hero,
     WhatToGet,
     OurCourses,
-    VideoSection,
+    // VideoSection,
     SuccessStories,
     Community,
-    Appointment,
+    // Appointment,
   },
 });
 </script>
@@ -144,6 +144,7 @@ export default defineComponent({
     font-size: 1.1rem !important;
   }
 }
+
 @media screen and (max-width: 400px) {
   .hero_image,
   .hero_text {
@@ -282,6 +283,11 @@ export default defineComponent({
   .success_sub {
     font-size: 0.9rem !important;
     padding: 0 10% !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  .course_cards {
+    grid-template-columns: repeat(1, 80%);
   }
 }
 

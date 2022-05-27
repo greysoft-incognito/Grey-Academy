@@ -4,10 +4,14 @@
       <div class="q-pr-xl tweets">
         <h6 class="text-bold">ABOUT US</h6>
         <div class="">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut asperiores
-          incidunt est vero eius voluptatibus aliquam ipsa aliquid.
+          Greyacademy is an online learning platform covering different fields
+          and scope of study, we also have a mentorship program where students
+          can be mentored personally by professionals, guiding them to the
+          zenith of their career.
         </div>
-        <div>31 Gwari Avenue, Kaduna</div>
+        <div class="q-my-md text-bold">
+          <q-icon name="location_on" /> 31 Gwari Avenue, Kaduna
+        </div>
       </div>
 
       <q-input
@@ -29,16 +33,18 @@
         <div class="tweet q-mb-lg">
           <i class="fa-brands fa-twitter fa-2x q-mr-lg"></i>
           <div class="tweet_text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. harum sint
-            voluptatibus! Provident, temporibus.
+            Do you know we have four schools at Grey-Academy? We have: tech
+            school, creative school, business school, and design school. All the
+            schools at Grey-Academy are fully operational with active courses.
           </div>
         </div>
         <div class="tweet q-mb-lg">
           <i class="fa-brands fa-twitter fa-2x q-mr-lg"></i>
           <div class="tweet_text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. cumque
-            laboriosam aperiam dolor necessitatibus, veniam beatae dolorem iste
-            eveniet harum sint voluptatibus! Provident, temporibus.
+            Greyacademy cares for its students and wants everybody to leverage
+            this opportunity for growth. In view of this, Grey-Academy has made
+            an option for students to split payment of tuition fee into two
+            places before completion of course.
           </div>
         </div>
       </div>
@@ -74,9 +80,6 @@
           </li>
           <li>
             <a href=""> <i class="fa-brands fa-linkedin fa-2x q-mx-sm"></i></a>
-          </li>
-          <li>
-            <a href=""> <i class="fa-brands fa-pinterest fa-2x q-mx-sm"></i></a>
           </li>
           <li>
             <a href=""> <i class="fa-brands fa-twitter fa-2x q-mx-sm"></i></a>
