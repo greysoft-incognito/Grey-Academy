@@ -90,7 +90,7 @@ const programming = [
   },
   {
     id: 4,
-    title: "Become a Data Analyst (Incubator)",
+    title: "Become a Data Analyst ",
     description:
       "The Data Incubator program of the Data School is designed for very early professionals as an immersion program to help kick-start the journey of being a Data analyst.",
     image: "/Images/Programming/data.png",

@@ -41,6 +41,12 @@
   background-repeat: no-repeat;
 }
 
+@media screen and(max-width:1250px) {
+  .modal {
+    height: 100vh !important;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .modal {
     max-width: 70vw !important;

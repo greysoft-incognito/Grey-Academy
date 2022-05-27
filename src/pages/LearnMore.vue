@@ -113,7 +113,7 @@
         label="Register"
         @click="course_please(courseArray.title), (register = true)"
         size="1.05rem"
-        style="width: 50%"
+        style="width: 30%"
         flat
         text-color="white"
         class="bg-primary self-end register q-mb-xl q-mt-md"

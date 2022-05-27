@@ -158,12 +158,12 @@ export default defineComponent({
 .general_padding {
   padding: 0 8%;
 }
-.grid_cards {
+.cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 25%);
   gap: 10px;
 }
-.grid_sponsors {
+.sponsors {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   place-items: center;
@@ -229,7 +229,9 @@ export default defineComponent({
 }
 .course_image {
   border-radius: 10px;
+  height: 40vh !important;
 }
+
 /* .course_text{
     display: none;
   } */
@@ -245,7 +247,7 @@ export default defineComponent({
 }
 
 @media screen and (max-width: 1001px) {
-  .grid_cards,
+  .cards,
   .course_cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -255,7 +257,7 @@ export default defineComponent({
 }
 
 @media screen and (max-width: 600px) {
-  .grid_sponsors {
+  .sponsors {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
   }
@@ -268,7 +270,7 @@ export default defineComponent({
 }
 
 @media screen and (max-width: 601px) {
-  .grid_cards,
+  .cards,
   .course_cards {
     display: grid;
     grid-template-columns: repeat(1, 65%);
@@ -292,7 +294,7 @@ export default defineComponent({
 }
 
 @media screen and (max-width: 440px) {
-  .grid_cards {
+  .cards {
     grid-template-columns: repeat(1, 85%);
   }
   .course_cards {

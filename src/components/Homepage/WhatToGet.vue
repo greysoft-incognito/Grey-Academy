@@ -17,7 +17,7 @@
     >
       What You Will Get
     </div>
-    <div class="grid_cards q-my-xl">
+    <div class="cards q-my-xl">
       <q-card class="q-px-sm q-py-xs relative-position hover_effect">
         <div class="q-my-md">
           <q-avatar

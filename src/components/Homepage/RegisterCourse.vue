@@ -1,7 +1,7 @@
 <template>
   <div class="q-px-lg relative-position">
     <div class="text-primary text-bold text-center text-h6 q-my-md">
-      {{ coursed }} Program
+      {{ coursed }}
     </div>
 
     <div class="q-mb-md">
@@ -66,17 +66,20 @@ export default {
       formData.append("email", this.email);
       formData.append("phone", this.phone);
       console.log(formData);
-      axios({
-        method: "POST",
-        url: "http://192.168.1.168:8000/api/application",
-        data: formData,
-      })
-        .then((response) => {
-          console.log(response);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+      console.log(this.name);
+      console.log(this.email);
+      console.log(this.phone);
+      // axios({
+      //   method: "POST",
+      //   url: "",
+      //   data: formData,
+      // })
+      //   .then((response) => {
+      //     console.log(response);
+      //   })
+      //   .catch((error) => {
+      //     console.log(error);
+      //   });
     },
   },
   mounted() {

@@ -6,7 +6,7 @@
     >
       Our Courses
     </div>
-    <div class="grid_cards course_cards">
+    <div class="cards course_cards">
       <div class="course course1 q-pa-none">
         <div class="course_image relative-position">
           <q-img
@@ -26,16 +26,13 @@
           <div class="text-primary text-bold text-subtitle1">
             {{ programming.title }}
           </div>
-          <div class="q-my-sm">
+          <div :class="`q-my-sm  ${width <= 770 ? 'ellipsis-3-lines' : ''}`">
             {{ programming.overview }}
           </div>
-          <a
-            @click="
-              setToLocal(programming),
-                this.$router.push(`/learn/${programming.title}`)
-            "
+          <router-link
+            :to="`/learn/programming/${programming.id}`"
             class="q-my-md"
-            >Learn more...</a
+            >Learn more...</router-link
           >
           <div>
             <q-btn
@@ -69,16 +66,11 @@
           <div class="text-primary text-bold text-subtitle1">
             {{ Creative.title }}
           </div>
-          <div class="q-mb-md">
+          <div :class="`q-my-sm  ${width <= 770 ? 'ellipsis-3-lines' : ''}`">
             {{ Creative.overview }}
           </div>
-          <a
-            @click="
-              setToLocal(Creative),
-                this.$router.push(`/learn/${Creative.title}`)
-            "
-            class="q-my-md"
-            >Learn more...</a
+          <router-link :to="`/learn/creative/${Creative.id}`" class="q-my-md"
+            >Learn more...</router-link
           >
           <div>
             <q-btn
@@ -112,15 +104,11 @@
           <div class="text-primary text-bold text-subtitle1">
             {{ design.title }}
           </div>
-          <div class="q-my-sm">
+          <div :class="`q-my-sm  ${width <= 770 ? 'ellipsis-3-lines' : ''}`">
             {{ design.overview }}
           </div>
-          <a
-            @click="
-              setToLocal(design), this.$router.push(`/learn/${design.title}`)
-            "
-            class="q-my-md"
-            >Learn more...</a
+          <router-link :to="`/learn/design/${design.id}`" class="q-my-md"
+            >Learn more...</router-link
           >
           <div>
             <q-btn
@@ -154,16 +142,11 @@
           <div class="text-primary text-bold text-subtitle1">
             {{ business.title }}
           </div>
-          <div class="q-my-sm">
+          <div :class="`q-my-sm  ${width <= 770 ? 'ellipsis-3-lines' : ''}`">
             {{ business.overview }}
           </div>
-          <a
-            @click="
-              setToLocal(business),
-                this.$router.push(`/learn/${business.title}`)
-            "
-            class="q-my-md"
-            >Learn more...</a
+          <router-link :to="`/learn/business/${business.id}`" class="q-my-md"
+            >Learn more...</router-link
           >
           <div>
             <q-btn
@@ -199,7 +182,7 @@
     </q-card>
   </q-dialog>
   <q-dialog v-model="register" class="">
-    <q-card style="max-width: 50vw; width: 100%" class="full-height modal">
+    <q-card style="max-width: 50vw; width: 100%; height: 70vh" class="modal">
       <RegisterCourse :coursed="this.courseName" />
     </q-card>
   </q-dialog>
@@ -227,12 +210,13 @@ export default {
       Creative,
       schools: ref(false),
       register: ref(false),
+      width: window.innerWidth,
     };
   },
   methods: {
     course_please(a) {
       // a.splice('Become a')
-      this.courseName = a.split("Become a")[1];
+      this.courseName = a;
       console.log(this.courseName);
     },
     setToLocal(singleCourse) {
@@ -245,6 +229,7 @@ export default {
     // console.log(this.business[1]);
     // console.log(this.design[0]);
     // console.log(this.Creative[2]);
+    console.log(this.width);
     this.programming = this.programming[3];
     this.business = this.business[1];
     this.design = this.design[0];
