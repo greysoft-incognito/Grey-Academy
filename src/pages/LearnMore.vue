@@ -313,7 +313,7 @@ export default {
   methods: {
     course_please(a) {
       // a.splice('Become a')
-      this.courseName = a.split("Become a")[1];
+      this.courseName = a;
       console.log(this.courseName);
     },
   },
