@@ -1,0 +1,60 @@
+// app global css in SCSS form
+
+.button {
+  box-shadow: 0px 25px 45px -18px rgb(0, 113, 68, 0.75);
+}
+.general_padding {
+  padding: 0 10%;
+}
+
+// coureseee
+.hero_text {
+  width: 70%;
+}
+.testimony_image {
+  width: 91.5%;
+}
+.image {
+  cursor: pointer;
+  width: 15%;
+  height: 100%;
+}
+.testimonies {
+  cursor: pointer;
+  /* visibility: hidden; */
+}
+.image:hover .testimonies {
+  visibility: visible !important;
+}
+.testimonies:hover {
+  color: green !important;
+}
+.testimonies div {
+  text-decoration: underline;
+  /* display: none; */
+  /* visibility: hidden; */
+}
+
+.bg_props {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and(max-width:1250px) {
+  .modal {
+    height: 100vh !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .modal {
+    max-width: 70vw !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .modal {
+    max-width: 85vw !important;
+  }
+}
