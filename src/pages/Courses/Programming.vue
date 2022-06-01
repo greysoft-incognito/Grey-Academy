@@ -32,6 +32,7 @@
       :key="course.id"
     >
       <q-img
+        loading="eager"
         class="col-lg-3 col-md-5 col-sm-5 bg_props course_image"
         :src="course.image"
       ></q-img>
@@ -100,6 +101,7 @@
       :key="contract.id"
     >
       <q-img
+        loading="eager"
         :src="contract.image"
         class="col-lg-3 col-md-5 col-sm-5 bg_props course_image"
       />

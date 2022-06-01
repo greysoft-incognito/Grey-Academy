@@ -13,6 +13,7 @@
       >
         <div class="">
           <q-img
+            loading="eager"
             src="/Images/Learn/learn_hero.png"
             class="hero_man"
             width="50%"
