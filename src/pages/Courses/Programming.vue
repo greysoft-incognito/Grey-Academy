@@ -1,10 +1,10 @@
 <template>
   <div class="hero text-white">
-    <div class="hero_text q-my-auto">
-      <div class="text-h3 text-bold q-my-lg welcome_text">
+    <div class="hero-writings q-my-auto">
+      <div class="text-h3 text-bold q-my-lg welcome">
         Welcome to Programming School
       </div>
-      <div class="text-justify text-subtitle1 more_text">
+      <div class="text-justify text-subtitle1 more">
         Go from zero knowledge to being able to build your own complete website!
         Starting with the foundations of software engineering. By the end of
         this program you would have mastered a specialization and learn the art
@@ -212,7 +212,7 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.hero_text {
+.hero-writings {
   width: 70%;
 }
 .bg_props {
@@ -282,10 +282,10 @@ export default {
   }
 }
 @media screen and (max-width: 771px) {
-  .welcome_text {
+  .welcome {
     font-size: 2.2rem;
   }
-  .hero_text {
+  .hero-writings {
     width: 100%;
   }
   .testimony_image {
@@ -311,13 +311,13 @@ export default {
 }
 
 @media screen and (max-width: 501px) {
-  .welcome_text {
+  .welcome {
     font-size: 1.9rem;
   }
-  .more_text {
+  .more {
     font-size: 0.95rem;
   }
-  .hero_text {
+  .hero-writings {
     width: 100%;
   }
   .testimony_image {

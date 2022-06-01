@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <q-img src="Images/Vector.png" class="vector" />
+    <img src="Images/Vector.png" class="vector" />
     <!-- Logo -->
     <div class="absolute nav row justify-between">
       <div

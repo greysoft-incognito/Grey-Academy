@@ -1,7 +1,7 @@
 <template>
   <div class="hero text-white">
-    <div class="hero_text q-my-auto">
-      <div class="text-h3 text-bold q-my-lg welcome_text">
+    <div class="hero-writings q-my-auto">
+      <div class="text-h3 text-bold q-my-lg welcome">
         Welcome to Design School
       </div>
       <div class="text-justify text-subtitle1">
@@ -145,7 +145,7 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.hero_text {
+.hero-writings {
   width: 70%;
 }
 .bg_props {
@@ -215,10 +215,10 @@ export default {
   }
 }
 @media screen and (max-width: 771px) {
-  .welcome_text {
+  .welcome {
     font-size: 2.2rem;
   }
-  .hero_text {
+  .hero-writings {
     width: 100%;
   }
   .testimony_image {
@@ -236,13 +236,13 @@ export default {
 }
 
 @media screen and (max-width: 501px) {
-  .welcome_text {
+  .welcome {
     font-size: 1.9rem;
   }
   .more_text {
     font-size: 0.95rem;
   }
-  .hero_text {
+  .hero-writings {
     width: 100%;
   }
   .testimony_image {

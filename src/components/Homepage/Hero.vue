@@ -29,7 +29,7 @@
         </div>
       </div>
     </div>
-    <q-img src="/Images/heroGuy.png" class="hero_image relative-position" />
+    <img src="/Images/heroGuy.png" class="hero_image relative-position" />
 
     <div class="button_hide text-center">
       <q-btn
@@ -55,7 +55,7 @@
       class="absolute-bottom testimony_image row items-center q-px-md q-my-md"
     >
       <div class="image">
-        <q-img src="Images/Homepage/testimonial.png" width="100%" />
+        <img src="Images/Homepage/testimonial.png" width="100%" />
       </div>
       <div class="q-ml-md testimonies">
         <div class="text-subtitle1 text-bold">Read testimonials</div>
