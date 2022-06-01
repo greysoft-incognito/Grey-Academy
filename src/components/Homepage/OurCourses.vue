@@ -10,6 +10,7 @@
       <div class="course course1 q-pa-none">
         <div class="course_image relative-position">
           <q-img
+            loading="eager"
             :src="programming.image"
             class="course_image course_image1"
             height="100%"
@@ -50,6 +51,7 @@
       <div class="course course2 q-pa-none">
         <div class="course_image relative-position">
           <q-img
+            loading="eager"
             :src="Creative.image"
             class="course_image course_image2"
             height="100%"
@@ -88,6 +90,7 @@
       <div class="course course3 q-pa-none">
         <div class="course_image relative-position">
           <q-img
+            loading="eager"
             :src="design.image"
             class="course_image course_image3"
             height="100%"
@@ -126,6 +129,7 @@
       <div class="course course4 q-pa-none">
         <div class="course_image relative-position">
           <q-img
+            loading="eager"
             :src="business.image"
             class="course_image course_image4"
             height="100%"

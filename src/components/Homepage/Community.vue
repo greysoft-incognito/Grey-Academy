@@ -9,6 +9,7 @@
     </div>
     <div class="grid_images">
       <q-img
+        loading="eager"
         class="seventh_image"
         v-for="community in communities"
         :key="community.id"
